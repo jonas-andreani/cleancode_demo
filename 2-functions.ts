@@ -1,6 +1,13 @@
 // @ts-nocheck
 
-function processData(data) {
+type Data = {
+  name: string;
+  active: boolean;
+  birthDate: Date;
+  email: string;
+};
+
+function processData(data: Data[]) {
   let results: any[] = [];
   if (data && Array.isArray(data)) {
     for (let i = 0; i < data.length; i++) {
